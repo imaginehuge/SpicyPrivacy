@@ -79,4 +79,13 @@
     background-clip: text;
     text-fill-color: transparent;
   }
+  .tab-active {
+    @apply bg-brand-primary text-white;
+  }
+  .tab-inactive {
+    @apply bg-background-card text-text-muted;
+  }
+  .tab-inactive:hover {
+    @apply bg-gray-100; /* Using a neutral hover from Tailwind */
+  }
 }
