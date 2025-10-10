@@ -1,9 +1,20 @@
 // components/Header.tsx
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Logo } from "./Logo";
 import { Menu } from "lucide-react";
+import { cn } from "@/lib/utils"; // A utility for conditional classNames
 
 export function Header() {
+  const pathname = usePathname();
+
+  const navLinks = [
+    { href: "/services", label: "Services" },
+    { href: "/research", label: "Research" },
+  ];
+
   return (
     <header className="sticky top-0 z-10 border-b border-border-color bg-background-light/80 backdrop-blur-lg">
       <div className="container mx-auto flex items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
@@ -12,20 +23,22 @@ export function Header() {
           <h2 className="text-xl font-bold text-text-dark">SpicyPrivacy</h2>
         </Link>
         <nav className="hidden items-center gap-8 md:flex">
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className={cn(
+                "text-sm transition-colors hover:text-text-dark",
+                pathname === link.href
+                  ? "font-bold text-text-dark"
+                  : "font-medium text-text-muted"
+              )}
+            >
+              {link.label}
+            </Link>
+          ))}
           <Link
-            href="#"
-            className="text-sm font-medium text-text-muted transition-colors hover:text-text-dark"
-          >
-            Services
-          </Link>
-          <Link
-            href="#"
-            className="text-sm font-medium text-text-muted transition-colors hover:text-text-dark"
-          >
-            Research
-          </Link>
-          <Link
-            href="#"
+            href="/contact"
             className="btn-primary inline-flex h-10 items-center justify-center rounded-full px-6 text-sm font-bold transition-transform hover:scale-105"
           >
             Reach Out

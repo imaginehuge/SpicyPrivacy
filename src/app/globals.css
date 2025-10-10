@@ -1,8 +1,14 @@
-/* app/globals.css */
+/* src/app/globals.css */
 @import "tailwindcss";
 
+/* -----------------------------
+   Theme variables (Tailwind v4)
+   -----------------------------
+   Define theme variables with @theme so Tailwind generates utilities.
+   Use the --color-* namespace for colors and --font-* for font families.
+*/
 @theme {
-  /* Color Palette */
+  /* Colors (create bg-*, text-*, fill-* utilities) */
   --color-brand-primary: #4a4a4a;
   --color-brand-secondary: #d4af37;
   --color-background-light: #f5f5dc;
@@ -11,18 +17,57 @@
   --color-text-muted: #6b7280;
   --color-border-color: #e5e7eb;
 
-  /* Font Families */
-  --font-family-sans: "Inter", sans-serif;
-  --font-family-serif: "Playfair Display", serif;
+  --color-background-card: #f5f5dc;
+  --color-text-dark: #212121;
+  --color-text-muted: #6b7280;
+  --color-border-color: #e5e7eb;
+
+  /* Fonts (creates font-* utilities) */
+  --font-sans: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", sans-serif;
+  --font-serif: "Playfair Display", Georgia, Cambria, "Times New Roman", Times,
+    serif;
 }
 
+/* -----------------------------
+   Theme overrides (dark mode)
+   -----------------------------
+   Use base layer to override theme variables for dark mode.
+*/
+@layer base {
+  :root {
+    /* keep sensible defaults on :root as well (optional) */
+  }
+
+  /* override theme variables when `.dark` is present on <html> or <body> */
+  .dark {
+    --color-background-light: #0f172a;
+    --color-background-card: #111827;
+    --color-text-dark: #f9fafb;
+    --color-text-muted: #9ca3af;
+    --color-brand-primary: #f9fafb;
+    --color-brand-secondary: #d4af37;
+    --color-border-color: #1f2937;
+  }
+}
+
+/* -----------------------------
+   Custom utilities
+   -----------------------------
+   Use @layer utilities and @apply to compose Tailwind classes.
+*/
 @layer utilities {
   .btn-primary {
-    @apply bg-brand-primary text-white;
+    /* use Tailwind-generated utilities */
+    @apply bg-brand-primary text-white font-medium rounded-md px-4 py-2;
   }
+
   .btn-primary:hover {
-    @apply bg-[#333333];
+    /* simple hover without trying to @apply an arbitrary color */
+    filter: brightness(0.9);
   }
+
   .text-gradient {
     background-image: linear-gradient(
       90deg,
