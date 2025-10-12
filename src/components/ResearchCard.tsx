@@ -3,12 +3,14 @@ import Link from "next/link";
 import { ArrowRight, ArrowDown } from "lucide-react";
 
 export interface Publication {
+  id: number;
   title: string;
   description: string;
-  authors: string;
-  date: string;
-  link: string;
-  category: "White Papers" | "Policy Analysis" | "Research & Commentary";
+  tags: string[];
+  authors?: string;
+  date?: string;
+  link?: string;
+  category?: "White Papers" | "Policy Analysis" | "Research & Commentary";
   isPdf?: boolean;
 }
 
@@ -26,10 +28,10 @@ export function ResearchCard({ publication }: ResearchCardProps) {
         <p className="mt-3 text-base text-text-muted">{description}</p>
       </div>
       <div className="border-t border-border-color p-6">
-        <p className="text-sm font-medium text-text-muted">By {authors}</p>
-        <p className="text-sm text-text-muted">{date}</p>
+        {authors && <p className="text-sm font-medium text-text-muted">By {authors}</p>}
+        {date && <p className="text-sm text-text-muted">{date}</p>}
         <Link
-          href={link}
+          href={link || '#'}
           className="group mt-4 inline-flex items-center text-sm font-bold text-brand-secondary transition-colors hover:text-brand-primary"
         >
           {isPdf ? "Download PDF" : "Read More"}

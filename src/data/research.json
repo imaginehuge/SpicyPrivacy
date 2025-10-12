@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "The Impact of AI on Data Privacy",
+    "description": "A deep dive into how artificial intelligence is changing the landscape of data privacy and what it means for consumers and businesses.",
+    "tags": ["AI", "Data Privacy"]
+  },
+  {
+    "id": 2,
+    "title": "AI Governance: Best Practices",
+    "description": "This paper outlines a framework for effective AI governance, including best practices for ethical AI development and deployment.",
+    "tags": ["AI Governance", "Best Practices"]
+  },
+  {
+    "id": 3,
+    "title": "The Role of Machine Learning in Cybersecurity",
+    "description": "Exploring the use of machine learning algorithms to detect and prevent cyber threats.",
+    "tags": ["AI", "Cybersecurity"]
+  },
+  {
+    "id": 4,
+    "title": "Data Privacy Regulations: A Global Overview",
+    "description": "A comprehensive review of data privacy regulations around the world, including GDPR, CCPA, and more.",
+    "tags": ["Data Privacy", "Regulations"]
+  },
+  {
+    "id": 5,
+    "title": "Ethical Considerations in AI",
+    "description": "An examination of the ethical challenges posed by artificial intelligence and how to address them.",
+    "tags": ["AI", "Ethics"]
+  }
+]
