@@ -21,7 +21,7 @@ export default function TermsPage() {
         <div className="space-y-4">
           <h2 className="text-2xl font-bold">1. Introduction</h2>
           <p className="text-text-muted">
-            Welcome to SpicyPrivacy! These Terms of Service ("Terms") govern
+            Welcome to SpicyPrivacy! These Terms of Service (&quot;Terms&quot;) govern
             your use of our website and services. By accessing or using our
             services, you agree to be bound by these Terms.
           </p>

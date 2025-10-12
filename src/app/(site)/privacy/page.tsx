@@ -21,7 +21,7 @@ export default function PrivacyPage() {
         <div className="space-y-4">
           <h2 className="text-2xl font-bold">1. Introduction</h2>
           <p className="text-text-muted">
-            SpicyPrivacy ("we," "us," or "our") is committed to protecting
+            SpicyPrivacy (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) is committed to protecting
             your privacy. This Privacy Policy explains how we collect, use,
             disclose, and safeguard your information when you visit our
             website.
