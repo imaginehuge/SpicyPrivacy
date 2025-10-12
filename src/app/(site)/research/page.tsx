@@ -1,4 +1,3 @@
-// app/(site)/research/page.tsx
 import { Metadata } from "next";
 import { ResearchTabs } from "@/components/ResearchTabs";
 import { Publication } from "@/components/ResearchCard";

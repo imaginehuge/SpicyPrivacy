@@ -10,19 +10,19 @@ export function Footer() {
         </p>
         <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
           <Link
-            href="#"
+            href="/terms"
             className="text-sm text-text-muted transition-colors hover:text-text-dark"
           >
             Terms of Service
           </Link>
           <Link
-            href="#"
+            href="/privacy"
             className="text-sm text-text-muted transition-colors hover:text-text-dark"
           >
             Privacy Policy
           </Link>
           <Link
-            href="#"
+            href="/about"
             className="text-sm text-text-muted transition-colors hover:text-text-dark"
           >
             About
