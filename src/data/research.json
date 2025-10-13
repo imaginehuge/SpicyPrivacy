@@ -3,30 +3,40 @@
     "id": 1,
     "title": "The Impact of AI on Data Privacy",
     "description": "A deep dive into how artificial intelligence is changing the landscape of data privacy and what it means for consumers and businesses.",
-    "tags": ["AI", "Data Privacy"]
+    "tags": ["AI", "Data Privacy"],
+    "link": "/research/ai-data-privacy",
+    "source": "SpicyPrivacy Blog"
   },
   {
     "id": 2,
     "title": "AI Governance: Best Practices",
     "description": "This paper outlines a framework for effective AI governance, including best practices for ethical AI development and deployment.",
-    "tags": ["AI Governance", "Best Practices"]
+    "tags": ["AI Governance", "Best Practices"],
+    "link": "https://www.forbes.com/sites/forbestechcouncil/2023/03/28/a-practical-guide-to-implementing-ai-governance/",
+    "source": "Forbes"
   },
   {
     "id": 3,
     "title": "The Role of Machine Learning in Cybersecurity",
     "description": "Exploring the use of machine learning algorithms to detect and prevent cyber threats.",
-    "tags": ["AI", "Cybersecurity"]
+    "tags": ["AI", "Cybersecurity"],
+    "link": "/research/ml-cybersecurity",
+    "source": "SpicyPrivacy Blog"
   },
   {
     "id": 4,
     "title": "Data Privacy Regulations: A Global Overview",
     "description": "A comprehensive review of data privacy regulations around the world, including GDPR, CCPA, and more.",
-    "tags": ["Data Privacy", "Regulations"]
+    "tags": ["Data Privacy", "Regulations"],
+    "link": "https://www.spicyprivacy.com/reports/global-privacy-regulations.pdf",
+    "source": "PDF Download"
   },
   {
     "id": 5,
     "title": "Ethical Considerations in AI",
     "description": "An examination of the ethical challenges posed by artificial intelligence and how to address them.",
-    "tags": ["AI", "Ethics"]
+    "tags": ["AI", "Ethics"],
+    "link": "https://hbr.org/2023/05/the-risks-of-generative-ai-and-how-to-manage-them",
+    "source": "Harvard Business Review"
   }
 ]
