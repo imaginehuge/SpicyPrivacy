@@ -1,4 +1,3 @@
-// components/contact/ContactForm.tsx
 "use client";
 
 import { useState } from "react";
@@ -25,6 +24,12 @@ export function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
 
   const handleSelectUserType = (type: UserType) => {
+    if (type === "corporate") {
+      // Open Zoho form directly in same window
+      window.location.href =
+        "https://forms.zohopublic.in/sarthakgoyal487gm1/form/ContactUs/formperma/GOzTPi3pMe2hg6CnLg_4EoQy-IUZ6xpJl0-Nasqq6qA";
+      return;
+    }
     setUserType(type);
     setStep(2);
   };
@@ -32,13 +37,6 @@ export function ContactForm() {
   const handleBack = () => {
     setStep(1);
     setUserType(null);
-  };
-
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    // Here you would typically handle form submission, e.g., send data to an API
-    console.log("Form submitted");
-    setSubmitted(true);
   };
 
   if (submitted) {
@@ -79,7 +77,10 @@ export function ContactForm() {
         <InquiryForm
           userType={userType}
           onBack={handleBack}
-          onSubmit={handleSubmit}
+          onSubmit={(e) => {
+            e.preventDefault();
+            setSubmitted(true);
+          }}
         />
       )}
     </div>
