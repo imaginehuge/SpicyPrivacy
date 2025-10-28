@@ -1,7 +1,5 @@
-// components/ResearchCard.tsx
 import Link from "next/link";
-import { ArrowRight, ArrowDown, Link as LinkIcon } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Link as LinkIcon } from "lucide-react";
 
 export interface Publication {
   id: number;
@@ -21,51 +19,59 @@ interface ResearchCardProps {
 
 export function ResearchCard({ publication }: ResearchCardProps) {
   const { title, description, authors, date, link, source } = publication;
-  const isExternal = link && link.startsWith("http");
-  const isPdf = source === "PDF Download";
+  const isExternal = link?.startsWith("http");
 
-  const CardContent = () => (
-    <div className="flex flex-col overflow-hidden rounded-lg border border-border-color bg-background-card shadow-lg transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-xl h-full">
-      <div className="flex-grow p-6">
-        <h3 className="text-xl font-bold text-text-dark">{title}</h3>
+  const CardInner = (
+    <article
+      className="flex flex-col justify-between h-[340px] rounded-xl border border-border-color bg-background-card shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-[2px] focus-visible:ring-2 focus-visible:ring-primary/50"
+      aria-label={title}
+    >
+      {/* top content */}
+      <div className="p-5 flex flex-col flex-grow">
+        <h3 className="text-lg font-semibold text-text-dark line-clamp-2">
+          {title}
+        </h3>
+
         {source && (
-          <div className="flex items-center text-sm text-text-muted mt-2">
+          <div className="flex items-center text-sm text-text-muted mt-1">
             {isExternal && <LinkIcon className="mr-1 h-4 w-4" />}
-            {source}
+            <span>{source}</span>
           </div>
         )}
-        <p className="mt-3 text-base text-text-muted">{description}</p>
-      </div>
-      <div className="border-t border-border-color p-6">
-        <div className="flex items-center justify-between">
-          <div>
-            {authors && <p className="text-sm font-medium text-text-muted">By {authors}</p>}
-            {date && <p className="text-sm text-text-muted">{date}</p>}
+
+        {(authors || date) && (
+          <div className="mt-2 text-sm text-text-muted italic">
+            {authors && <span>{authors}</span>}
+            {authors && date && <span> • </span>}
+            {date && <time>{date}</time>}
           </div>
-          <Button variant="secondary" size="sm" className="shadow-md">
-            {isPdf ? "Download PDF" : "Read More"}
-            {isPdf ? (
-              <ArrowDown className="ml-1 h-4 w-4" />
-            ) : (
-              <ArrowRight className="ml-1 h-4 w-4" />
-            )}
-          </Button>
-        </div>
+        )}
+
+        <hr className="border-border-color/50 my-4" />
+
+        <p className="text-base text-text-muted line-clamp-4 flex-grow">
+          {description}
+        </p>
       </div>
-    </div>
+    </article>
   );
 
-  if (isExternal) {
-    return (
-      <a href={link} target="_blank" rel="noopener noreferrer" className="group">
-        <CardContent />
+  if (link) {
+    return isExternal ? (
+      <a
+        href={link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group block focus:outline-none"
+      >
+        {CardInner}
       </a>
+    ) : (
+      <Link href={link} className="group block focus:outline-none">
+        {CardInner}
+      </Link>
     );
   }
 
-  return (
-    <Link href={link || '#'} className="group">
-      <CardContent />
-    </Link>
-  );
+  return <div className="group block">{CardInner}</div>;
 }

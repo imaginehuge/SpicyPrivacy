@@ -22,8 +22,8 @@ const formTitles: Record<UserType, string> = {
 export function InquiryForm({ userType, onBack, onSubmit }: InquiryFormProps) {
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
   const [iframeHeight, setIframeHeight] = useState<number>(900); // initial height
-  const zfPerma = "GOzTPi3pMe2hg6CnLg_4EoQy-IUZ6xpJl0-Nasqq6qA";
-  const zohoSrc = `https://forms.zohopublic.in/sarthakgoyal487gm1/form/ContactUs/formperma/${zfPerma}?zf_rszfm=1`;
+  const zfPerma = "6R8NQ6NzcBtbgXJUbt7VdYroU9Ye_-tUsi6NfvKloL4";
+  const zohoSrc = `https://forms.zohopublic.in/sarthakgoyal3505gm1/form/ClientDetails/formperma/${zfPerma}?zf_rszfm=1`;
 
   useEffect(() => {
     if (userType !== "scholar") return;

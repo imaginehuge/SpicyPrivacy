@@ -1,4 +1,3 @@
-// components/ResearchTabs.tsx
 "use client";
 
 import { useState } from "react";
@@ -12,7 +11,10 @@ interface ResearchTabsProps {
 export function ResearchTabs({ publications }: ResearchTabsProps) {
   const [activeTab, setActiveTab] = useState("All");
 
-  const TABS = ["All", ...Array.from(new Set(publications.flatMap((p) => p.tags)))];
+  const TABS = [
+    "All",
+    ...Array.from(new Set(publications.flatMap((p) => p.tags))),
+  ];
 
   const filteredPublications =
     activeTab === "All"

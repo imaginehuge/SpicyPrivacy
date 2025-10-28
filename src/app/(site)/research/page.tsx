@@ -11,9 +11,6 @@ export const metadata: Metadata = {
 
 const publications: Publication[] = researchData.map((item) => ({
   ...item,
-  authors: "SpicyPrivacy Research Team",
-  date: "October 11, 2025",
-  link: "#",
 }));
 
 export default function ResearchPage() {

@@ -27,7 +27,7 @@ export function ContactForm() {
     if (type === "corporate") {
       // Open Zoho form directly in same window
       window.location.href =
-        "https://forms.zohopublic.in/sarthakgoyal487gm1/form/ContactUs/formperma/GOzTPi3pMe2hg6CnLg_4EoQy-IUZ6xpJl0-Nasqq6qA";
+        "https://forms.zohopublic.in/sarthakgoyal3505gm1/form/ClientDetails/formperma/6R8NQ6NzcBtbgXJUbt7VdYroU9Ye_-tUsi6NfvKloL4";
       return;
     }
     setUserType(type);
