@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     "Expert guidance and comprehensive solutions for AI and data privacy regulations.",
 };
 
+const NEXT_PUBLIC_BOOKING_SERVICE_URL =
+  process.env.NEXT_PUBLIC_BOOKING_SERVICE_URL;
+
 const servicesData = [
   {
     title: "Policy & Program Development",
@@ -104,7 +107,7 @@ export default function ServicesPage() {
             </div>
             <div className="flex-shrink-0">
               <Link
-                href="/contact"
+                href={NEXT_PUBLIC_BOOKING_SERVICE_URL}
                 className="btn-primary inline-flex h-12 items-center justify-center rounded-full px-8 text-base font-bold transition-transform hover:scale-105"
               >
                 Schedule a Consultation
