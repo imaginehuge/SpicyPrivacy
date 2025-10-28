@@ -1,4 +1,3 @@
-// components/contact/InquiryForm.tsx
 import { useEffect, useRef, useState } from "react";
 import { ChevronLeft } from "lucide-react";
 import { Input } from "@/components/ui/input";
@@ -47,7 +46,7 @@ export function InquiryForm({ userType, onBack, onSubmit }: InquiryFormProps) {
             iframeRef.current.scrollIntoView({ behavior: "smooth" });
         }
       } catch (e) {
-        // noop
+        console.error(e);
       }
     };
 
