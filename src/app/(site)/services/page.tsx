@@ -1,17 +1,20 @@
-// app/(site)/services/page.tsx
+// This component renders the Services page, detailing the offerings of SpicyPrivacy.
 import Link from "next/link";
 import { Metadata } from "next";
 import { ServiceCard } from "@/components/ServiceCard";
 
+// Metadata for the Services page, used for SEO and browser tab titles.
 export const metadata: Metadata = {
   title: "SpicyPrivacy - Services",
   description:
     "Expert guidance and comprehensive solutions for AI and data privacy regulations.",
 };
 
+// Environment variable for the booking service URL.
 const NEXT_PUBLIC_BOOKING_SERVICE_URL =
   process.env.NEXT_PUBLIC_BOOKING_SERVICE_URL;
 
+// Data for the services offered, structured for display in ServiceCard components.
 const servicesData = [
   {
     title: "Policy & Program Development",
@@ -73,6 +76,7 @@ export default function ServicesPage() {
   return (
     <section className="container mx-auto px-4 py-20 sm:px-6 lg:py-32 lg:px-8">
       <div className="space-y-16">
+        {/* Page title and description */}
         <div className="text-center">
           <h1 className="text-5xl font-black tracking-tighter sm:text-6xl md:text-7xl">
             <span className="text-gradient">Our Services</span>
@@ -83,6 +87,7 @@ export default function ServicesPage() {
           </p>
         </div>
 
+        {/* Grid display of ServiceCard components, populated from servicesData */}
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {servicesData.map((service) => (
             <ServiceCard
@@ -93,6 +98,7 @@ export default function ServicesPage() {
           ))}
         </div>
 
+        {/* Call to action section for tailored solutions and consultation booking */}
         <div className="rounded-2xl border border-border-color bg-background-card p-10 shadow-lg">
           <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
             <div className="text-center md:text-left">

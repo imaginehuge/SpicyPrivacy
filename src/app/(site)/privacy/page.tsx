@@ -1,6 +1,7 @@
-// app/(site)/privacy/page.tsx
+// This component renders the Privacy Policy page for SpicyPrivacy.
 import { Metadata } from "next";
 
+// Metadata for the Privacy Policy page, used for SEO and browser tab titles.
 export const metadata: Metadata = {
   title: "SpicyPrivacy - Privacy Policy",
   description: "Read our privacy policy.",
@@ -10,6 +11,7 @@ export default function PrivacyPage() {
   return (
     <section className="container mx-auto px-4 py-16 sm:px-6 lg:py-24 lg:px-8">
       <div className="mx-auto max-w-3xl space-y-8">
+        {/* Page title and last updated date */}
         <div className="text-center">
           <h1 className="text-4xl font-black tracking-tighter sm:text-5xl">
             Privacy Policy
@@ -18,6 +20,7 @@ export default function PrivacyPage() {
             Last updated: October 12, 2025
           </p>
         </div>
+        {/* Introduction section */}
         <div className="space-y-4">
           <h2 className="text-2xl font-bold">1. Introduction</h2>
           <p className="text-text-muted">

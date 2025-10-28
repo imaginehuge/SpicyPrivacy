@@ -1,6 +1,7 @@
-// app/(site)/terms/page.tsx
+// This component renders the Terms of Service page for SpicyPrivacy.
 import { Metadata } from "next";
 
+// Metadata for the Terms of Service page, used for SEO and browser tab titles.
 export const metadata: Metadata = {
   title: "SpicyPrivacy - Terms of Service",
   description: "Read our terms of service.",
@@ -10,6 +11,7 @@ export default function TermsPage() {
   return (
     <section className="container mx-auto px-4 py-16 sm:px-6 lg:py-24 lg:px-8">
       <div className="mx-auto max-w-3xl space-y-8">
+        {/* Page title and last updated date */}
         <div className="text-center">
           <h1 className="text-4xl font-black tracking-tighter sm:text-5xl">
             Terms of Service
@@ -18,6 +20,7 @@ export default function TermsPage() {
             Last updated: October 12, 2025
           </p>
         </div>
+        {/* Introduction section */}
         <div className="space-y-4">
           <h2 className="text-2xl font-bold">1. Introduction</h2>
           <p className="text-text-muted">

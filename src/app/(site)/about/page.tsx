@@ -1,6 +1,7 @@
-// app/(site)/about/page.tsx
+// This component renders the About Us page for SpicyPrivacy.
 import { Metadata } from "next";
 
+// Metadata for the About Us page, used for SEO and browser tab titles.
 export const metadata: Metadata = {
   title: "SpicyPrivacy - About Us",
   description: "Learn more about the SpicyPrivacy team and our mission.",
@@ -10,6 +11,7 @@ export default function AboutPage() {
   return (
     <section className="container mx-auto px-4 py-16 sm:px-6 lg:py-24 lg:px-8">
       <div className="space-y-12">
+        {/* Page title and main mission statement */}
         <div className="text-center">
           <h1 className="text-4xl font-black tracking-tighter sm:text-5xl">
             About SpicyPrivacy
@@ -19,6 +21,7 @@ export default function AboutPage() {
             to build and maintain ethical and compliant AI systems.
           </p>
         </div>
+        {/* Content sections: Our Story, Our Team, Our Values */}
         <div className="mx-auto max-w-3xl space-y-8">
           <div className="space-y-4">
             <h2 className="text-2xl font-bold">Our Story</h2>

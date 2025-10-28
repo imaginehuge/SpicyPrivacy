@@ -1,3 +1,4 @@
+// This component represents the main home page of the application.
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -5,8 +6,10 @@ import { Footer } from "@/components/Footer";
 export default function HomePage() {
   return (
     <div className="flex min-h-screen flex-col">
+      {/* Renders the main header of the page */}
       <Header />
       <main className="flex-grow">
+        {/* Hero section with a title, description, and a call to action */}
         <section className="container mx-auto px-4 py-20 sm:px-6 lg:py-40 lg:px-8">
           <div className="mx-auto max-w-5xl text-center">
             <div className="space-y-4">
@@ -21,6 +24,7 @@ export default function HomePage() {
                 privacy compliance, powered by a corporate team fueled by
                 research and policy expertise.
               </p>
+              {/* Call to action button linking to the services page */}
               <Link
                 href="/services"
                 className="btn-primary mt-8 inline-flex h-12 items-center justify-center rounded-full px-8 text-base font-bold transition-transform hover:scale-105"

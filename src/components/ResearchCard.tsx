@@ -1,6 +1,8 @@
+// This component displays a single research publication as a card.
 import Link from "next/link";
 import { Link as LinkIcon } from "lucide-react";
 
+// Interface defining the structure of a research publication.
 export interface Publication {
   id: number;
   title: string;
@@ -13,14 +15,17 @@ export interface Publication {
   category?: "White Papers" | "Policy Analysis" | "Research & Commentary";
 }
 
+// Interface for the props of the ResearchCard component.
 interface ResearchCardProps {
   publication: Publication;
 }
 
 export function ResearchCard({ publication }: ResearchCardProps) {
   const { title, description, authors, date, link, source } = publication;
+  // Determine if the link is external to apply appropriate target and rel attributes.
   const isExternal = link?.startsWith("http");
 
+  // Inner content of the card, wrapped in a Link or an anchor tag conditionally.
   const CardInner = (
     <article
       className="flex flex-col justify-between h-[340px] rounded-xl border border-border-color bg-background-card shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-[2px] focus-visible:ring-2 focus-visible:ring-primary/50"
@@ -56,6 +61,7 @@ export function ResearchCard({ publication }: ResearchCardProps) {
     </article>
   );
 
+  // Conditionally render a Next.js Link or a standard anchor tag based on whether the link is external.
   if (link) {
     return isExternal ? (
       <a
@@ -73,5 +79,6 @@ export function ResearchCard({ publication }: ResearchCardProps) {
     );
   }
 
+  // If no link is provided, render the card as a div.
   return <div className="group block">{CardInner}</div>;
 }

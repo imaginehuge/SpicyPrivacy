@@ -1,17 +1,21 @@
+// This component renders the inquiry form, dynamically adjusting based on the user type.
 import { useEffect, useRef, useState } from "react";
 import { ChevronLeft } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select } from "@/components/ui/select";
 
+// Defines the possible types of users for the inquiry form.
 export type UserType = "corporate" | "scholar" | "other";
 
+// Interface for the props of the InquiryForm component.
 interface InquiryFormProps {
   userType: UserType;
   onBack: () => void;
   onSubmit: (event: React.FormEvent<HTMLFormElement>) => void;
 }
 
+// Maps user types to their respective form titles.
 const formTitles: Record<UserType, string> = {
   corporate: "Corporate Inquiry",
   scholar: "Academic Inquiry",
@@ -19,11 +23,16 @@ const formTitles: Record<UserType, string> = {
 };
 
 export function InquiryForm({ userType, onBack, onSubmit }: InquiryFormProps) {
+  // Ref for the Zoho iframe to control its properties.
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
+  // State to manage the height of the Zoho iframe.
   const [iframeHeight, setIframeHeight] = useState<number>(900); // initial height
+  // Zoho form permanent ID.
   const zfPerma = "6R8NQ6NzcBtbgXJUbt7VdYroU9Ye_-tUsi6NfvKloL4";
+  // Constructed Zoho form source URL.
   const zohoSrc = `https://forms.zohopublic.in/sarthakgoyal3505gm1/form/ClientDetails/formperma/${zfPerma}?zf_rszfm=1`;
 
+  // Effect hook to handle messages from the Zoho iframe, primarily for resizing.
   useEffect(() => {
     if (userType !== "scholar") return;
 
@@ -54,10 +63,11 @@ export function InquiryForm({ userType, onBack, onSubmit }: InquiryFormProps) {
     return () => window.removeEventListener("message", handler);
   }, [userType, zfPerma]);
 
-  // Scholar: render embedded Zoho iframe centered in the page
+  // Render embedded Zoho iframe for 'scholar' user type.
   if (userType === "scholar") {
     return (
       <div className="mx-auto w-full max-w-4xl text-left">
+        {/* Back button to return to user type selection */}
         <button
           onClick={onBack}
           className="mb-6 flex items-center text-sm font-medium text-text-muted transition-colors hover:text-text-dark"
@@ -73,6 +83,7 @@ export function InquiryForm({ userType, onBack, onSubmit }: InquiryFormProps) {
           Embedded contact form. Complete and submit the form below.
         </p>
 
+        {/* Zoho form iframe container */}
         <div className="mx-auto mb-8 w-full rounded-lg bg-background-card p-4 shadow-sm">
           <div
             id={`zf_div_${zfPerma}`}
@@ -99,9 +110,10 @@ export function InquiryForm({ userType, onBack, onSubmit }: InquiryFormProps) {
     );
   }
 
-  // Non-scholar: existing internal form fields
+  // Render internal form fields for 'corporate' and 'other' user types.
   return (
     <div className="mx-auto w-full max-w-xl">
+      {/* Back button to return to user type selection */}
       <button
         onClick={onBack}
         className="mb-8 flex items-center text-sm font-medium text-text-muted transition-colors hover:text-text-dark"
@@ -117,6 +129,7 @@ export function InquiryForm({ userType, onBack, onSubmit }: InquiryFormProps) {
       </p>
 
       <form onSubmit={onSubmit} className="space-y-6 text-left">
+        {/* Conditional fields for 'corporate' user type */}
         {userType === "corporate" && (
           <div className="space-y-6">
             <div>
@@ -166,6 +179,7 @@ export function InquiryForm({ userType, onBack, onSubmit }: InquiryFormProps) {
           </div>
         )}
 
+        {/* Conditional fields for 'other' user type */}
         {userType === "other" && (
           <div className="space-y-6">
             <div>
@@ -194,6 +208,7 @@ export function InquiryForm({ userType, onBack, onSubmit }: InquiryFormProps) {
           </div>
         )}
 
+        {/* Common fields for all non-scholar inquiries */}
         <div>
           <label
             htmlFor="subject"
@@ -231,6 +246,7 @@ export function InquiryForm({ userType, onBack, onSubmit }: InquiryFormProps) {
           </Select>
         </div>
 
+        {/* Submit button */}
         <div className="pt-4 text-center">
           <button
             type="submit"

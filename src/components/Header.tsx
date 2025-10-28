@@ -1,4 +1,4 @@
-// components/Header.tsx
+// This component renders the main header of the application, including navigation and mobile menu toggle.
 "use client";
 
 import Link from "next/link";
@@ -11,8 +11,10 @@ import { MobileNav } from "./MobileNav";
 
 export function Header() {
   const pathname = usePathname();
+  // State to control the visibility of the mobile menu.
   const [showMobileMenu, setShowMobileMenu] = useState(false);
 
+  // Effect to manage body overflow when mobile menu is open.
   useEffect(() => {
     if (showMobileMenu) {
       document.body.classList.add("overflow-hidden");
@@ -21,6 +23,7 @@ export function Header() {
     }
   }, [showMobileMenu]);
 
+  // Navigation links for the header.
   const navLinks = [
     { href: "/services", label: "Services" },
     { href: "/research", label: "Research" },
@@ -30,10 +33,12 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-border-color bg-background-light/80 backdrop-blur-lg">
       <div className="container mx-auto flex items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+        {/* Logo and site title */}
         <Link href="/" className="flex items-center gap-3">
           <Logo />
           <h2 className="text-xl font-bold text-text-dark">SpicyPrivacy</h2>
         </Link>
+        {/* Desktop navigation */}
         <nav className="hidden items-center gap-8 md:flex">
           {navLinks.map((link) => (
             <Link
@@ -55,6 +60,7 @@ export function Header() {
             </Link>
           ))}
         </nav>
+        {/* Mobile menu toggle button */}
         <button
           className="rounded-full p-2 text-text-muted md:hidden"
           onClick={() => setShowMobileMenu(!showMobileMenu)}
@@ -65,6 +71,7 @@ export function Header() {
             <Menu className="h-6 w-6" />
           )}
         </button>
+        {/* Mobile navigation component, visible when showMobileMenu is true */}
         {showMobileMenu && (
           <MobileNav onLinkClick={() => setShowMobileMenu(false)} />
         )}

@@ -1,3 +1,4 @@
+// This component defines the root layout for the entire application.
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
   title: "SpicyPrivacy",
   description: "AI Governance x Data Privacy",
 };
-
+// The main layout component that wraps all pages.
 export default function RootLayout({
   children,
 }: {

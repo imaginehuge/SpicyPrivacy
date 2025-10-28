@@ -1,3 +1,4 @@
+// This component renders the 404 Not Found page.
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -5,8 +6,10 @@ import { Footer } from "@/components/Footer";
 export default function NotFound() {
   return (
     <div className="flex min-h-screen flex-col">
+      {/* Renders the main header of the page */}
       <Header />
       <main className="flex-grow">
+        {/* Section displaying the 404 error message and a link to the home page */}
         <section className="container mx-auto px-4 py-20 sm:px-6 lg:py-40 lg:px-8">
           <div className="mx-auto max-w-5xl text-center">
             <div className="space-y-4">
@@ -16,6 +19,7 @@ export default function NotFound() {
               <p className="mx-auto max-w-3xl pt-2 text-lg text-text-muted">
                 The page you are looking for does not exist.
               </p>
+              {/* Link to navigate back to the home page */}
               <Link
                 href="/"
                 className="btn-primary mt-8 inline-flex h-12 items-center justify-center rounded-full px-8 text-base font-bold transition-transform hover:scale-105"
