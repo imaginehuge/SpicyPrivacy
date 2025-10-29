@@ -10,10 +10,6 @@ export const metadata: Metadata = {
     "Expert guidance and comprehensive solutions for AI and data privacy regulations.",
 };
 
-// Environment variable for the booking service URL.
-const NEXT_PUBLIC_BOOKING_SERVICE_URL =
-  process.env.NEXT_PUBLIC_BOOKING_SERVICE_URL;
-
 // Data for the services offered, structured for display in ServiceCard components.
 const servicesData = [
   {
@@ -113,7 +109,7 @@ export default function ServicesPage() {
             </div>
             <div className="flex-shrink-0">
               <Link
-                href={NEXT_PUBLIC_BOOKING_SERVICE_URL}
+                href="https://business1.zohobookings.in/#/business"
                 className="btn-primary inline-flex h-12 items-center justify-center rounded-full px-8 text-base font-bold transition-transform hover:scale-105"
               >
                 Schedule a Consultation
