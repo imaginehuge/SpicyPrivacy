@@ -1,4 +1,4 @@
-// This component represents the main home page of the application.
+// The main home page of the application.
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
