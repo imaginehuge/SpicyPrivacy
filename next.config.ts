@@ -1,13 +1,23 @@
 import type { NextConfig } from "next";
 
+const isProd = process.env.NODE_ENV === "production";
+
 const nextConfig: NextConfig = {
-  /* config options here */
+  output: "export",
+
+  basePath: isProd ? "/<your-repo-name>" : "",
+
+  images: {
+    unoptimized: true,
+  },
+
   compiler: {
-    removeConsole: process.env.NODE_ENV === "production",
+    removeConsole: isProd,
   },
   experimental: {
-    optimizeCss: true, // enables automatic CSS optimization
+    optimizeCss: true,
   },
+  assetPrefix: isProd ? "/SpicyPrivacy/" : "",
 };
 
 export default nextConfig;
