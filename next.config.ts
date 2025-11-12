@@ -4,20 +4,17 @@ const isProd = process.env.NODE_ENV === "production";
 
 const nextConfig: NextConfig = {
   output: "export",
-
-  basePath: isProd ? "/<your-repo-name>" : "",
-
+  basePath: isProd ? "/SpicyPrivacy" : "",
+  assetPrefix: isProd ? "/SpicyPrivacy/" : "",
   images: {
     unoptimized: true,
   },
-
   compiler: {
     removeConsole: isProd,
   },
   experimental: {
     optimizeCss: true,
   },
-  assetPrefix: isProd ? "/SpicyPrivacy/" : "",
 };
 
 export default nextConfig;

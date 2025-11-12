@@ -3,6 +3,7 @@ name: Deploy Next.js to GitHub Pages
 on:
   push:
     branches: [main]
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -12,7 +13,6 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -28,10 +28,7 @@ jobs:
       - name: Build Next.js app
         run: npm run build
 
-      - name: Export static files
-        run: npx next export
-
-      - name: Upload artifact
+      - name: Upload static files as artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: out
