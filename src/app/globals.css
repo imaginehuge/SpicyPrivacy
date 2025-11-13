@@ -22,8 +22,8 @@
   --font-sans: var(--font-poppins), system-ui, -apple-system, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", sans-serif;
-  --font-serif: var(--font-playfair-display), Georgia, Cambria, "Times New Roman",
-    Times, serif;
+  --font-serif: var(--font-playfair-display), Georgia, Cambria,
+    "Times New Roman", Times, serif;
 }
 
 /* -----------------------------

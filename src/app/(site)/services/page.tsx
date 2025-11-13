@@ -75,7 +75,7 @@ export default function ServicesPage() {
         {/* Page title and description */}
         <div className="text-center">
           <h1 className="text-5xl font-black tracking-tighter sm:text-6xl md:text-7xl">
-            <span className="text-gradient">Our Services</span>
+            <span className="text-gradient pr-2">Our Services</span>
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-text-muted">
             We provide expert guidance and comprehensive solutions to help you
