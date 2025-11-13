@@ -4,10 +4,11 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
-import { Logo } from "./Logo";
+import Logo from "SPR1.png";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { MobileNav } from "./MobileNav";
+import Image from "next/image";
 
 export function Header() {
   const pathname = usePathname();
@@ -35,8 +36,8 @@ export function Header() {
       <div className="container mx-auto flex items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
         {/* Logo and site title */}
         <Link href="/" className="flex items-center gap-3">
-          <Logo />
-          <h2 className="text-xl font-bold text-text-dark">SpicyPrivacy</h2>
+          <Image src="/SPR1.png" alt="Company Logo" width={100} height={60} />
+          {/* <h2 className="text-xl font-bold text-text-dark">SpicyPrivacy</h2> */}
         </Link>
         {/* Desktop navigation */}
         <nav className="hidden items-center gap-8 md:flex">
