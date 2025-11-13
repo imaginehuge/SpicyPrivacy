@@ -1,13 +1,15 @@
 // Root layout for the entire SpicyPrivacy application
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Poppins, Playfair_Display } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 
 // Font configuration
-const inter = Inter({
+const poppins = Poppins({
   subsets: ["latin"],
-  variable: "--font-inter",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  style: ["normal", "italic"],
+  variable: "--font-poppins",
   display: "swap",
 });
 
@@ -23,6 +25,9 @@ export const metadata: Metadata = {
   title: "SpicyPrivacy — Privacy Research & AI Governance",
   description:
     "Spicy Privacy is a platform dedicated to privacy research, awareness, and digital protection services. Explore insights, reports, and tools advancing AI governance and data privacy.",
+  icons: {
+    icon: "/images/logo-light.png",
+  },
   keywords: [
     "privacy",
     "data protection",
@@ -41,10 +46,8 @@ export const metadata: Metadata = {
     siteName: "SpicyPrivacy",
     images: [
       {
-        url: "https://www.spicyprivacy.com/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "SpicyPrivacy Website Preview",
+        url: "/images/logo-light.png",
+        alt: "SpicyPrivacy Logo",
       },
     ],
     locale: "en_US",
@@ -55,8 +58,8 @@ export const metadata: Metadata = {
     title: "SpicyPrivacy — Privacy Research & AI Governance",
     description:
       "Privacy research, awareness, and data protection by SpicyPrivacy.",
-    images: ["https://www.spicyprivacy.com/og-image.jpg"],
-    creator: "@SpicyPrivacy", // optional, replace with your X handle if available
+    images: ["/images/logo-light.png"],
+    creator: "@SpicyPrivacy",
   },
   metadataBase: new URL("https://www.spicyprivacy.com"),
   alternates: {
@@ -77,7 +80,6 @@ export default function RootLayout({
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=5"
         />
-        <link rel="icon" href="/SPR2.png" />
       </head>
       <Script
         id="ld-json-schema"
@@ -105,7 +107,7 @@ export default function RootLayout({
         }}
       />
       <body
-        className={`${inter.variable} ${playfairDisplay.variable} bg-background-light font-sans text-text-dark`}
+        className={`${poppins.variable} ${playfairDisplay.variable} bg-background-light font-sans text-text-dark`}
       >
         {children}
       </body>
