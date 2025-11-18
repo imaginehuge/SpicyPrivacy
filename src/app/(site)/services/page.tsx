@@ -109,7 +109,7 @@ export default function ServicesPage() {
             </div>
             <div className="flex-shrink-0">
               <Link
-                href="https://business1.zohobookings.in/#/business"
+                href="https://spicyprivacy.zohobookings.com/#/spicyprivacy"
                 className="btn-primary inline-flex h-12 items-center justify-center rounded-full px-8 text-base font-bold transition-transform hover:scale-105"
               >
                 Schedule a Consultation

@@ -33,7 +33,19 @@ export function ContactForm() {
     if (type === "corporate") {
       // Open Zoho form directly in same window
       window.location.href =
-        "https://forms.zohopublic.in/sarthakgoyal3505gm1/form/ClientDetails/formperma/6R8NQ6NzcBtbgXJUbt7VdYroU9Ye_-tUsi6NfvKloL4";
+        "https://forms.zohopublic.com/imaginehuge1/form/Contact1/formperma/vNuzFLPIYhNIVzpv3ohQu1Ngo9WMy6qOUnx5JKZxp5M";
+      return;
+    }
+    if (type === "scholar") {
+      // Open Zoho form directly in same window
+      window.location.href =
+        "https://forms.zohopublic.com/imaginehuge1/form/ScholarForm/formperma/OLyOvUgm-RwNOQVVqUvpf49EoqnG-PhvbNVYyoBp6tk";
+      return;
+    }
+    if (type === "other") {
+      // Open Zoho form directly in same window
+      window.location.href =
+        "https://forms.zohopublic.com/imaginehuge1/form/Other/formperma/b8LKdFlS9-d-vayNs3vkHS_s96YLtT2JcS7Dq1wue8Q";
       return;
     }
     setUserType(type);
@@ -81,18 +93,6 @@ export function ContactForm() {
             ))}
           </div>
         </div>
-      )}
-
-      {/* Step 2: Inquiry form, displayed after user type selection */}
-      {step === 2 && userType && (
-        <InquiryForm
-          userType={userType}
-          onBack={handleBack}
-          onSubmit={(e) => {
-            e.preventDefault();
-            setSubmitted(true);
-          }}
-        />
       )}
     </div>
   );
