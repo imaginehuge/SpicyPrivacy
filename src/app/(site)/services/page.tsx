@@ -1,7 +1,7 @@
 // This component renders the Services page, detailing the offerings of SpicyPrivacy.
-import Link from "next/link";
 import { Metadata } from "next";
 import { ServiceCard } from "@/components/ServiceCard";
+import { CalBookingButton } from "@/components/CalBookingButton";
 
 // Metadata for the Services page, used for SEO and browser tab titles.
 export const metadata: Metadata = {
@@ -108,12 +108,7 @@ export default function ServicesPage() {
               </p>
             </div>
             <div className="flex-shrink-0">
-              <Link
-                href="https://spicyprivacy.zohobookings.com/#/spicyprivacy"
-                className="btn-primary inline-flex h-12 items-center justify-center rounded-full px-8 text-base font-bold transition-transform hover:scale-105"
-              >
-                Schedule a Consultation
-              </Link>
+              <CalBookingButton />
             </div>
           </div>
         </div>
