@@ -2,7 +2,7 @@
 "use client";
 
 import { useState } from "react";
-import { InquiryForm, UserType } from "./InquiryForm";
+import { UserType } from "./InquiryForm";
 import { SubmissionSuccess } from "./SubmissionSuccess";
 
 // Defines the types of users who can submit an inquiry.

@@ -9,277 +9,330 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage() {
   return (
-    <section className="container mx-auto px-4 py-16 sm:px-6 lg:py-24 lg:px-8">
-      <div className="mx-auto max-w-3xl space-y-8">
-        {/* Page title and last updated date */}
-        <div className="text-center">
+    <section className="container mx-auto min-h-screen px-4 py-16 sm:px-6 lg:py-24 lg:px-8">
+      <div className="mx-auto max-w-3xl space-y-6">
+        <div className="text-center space-y-2">
           <h1 className="text-4xl font-black tracking-tighter sm:text-5xl">
             Privacy Policy
           </h1>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-text-muted">
-            Last Updated: 12.11.2025
+          <p className="text-lg text-text-muted">
+            Last Updated: 12 November 2025
           </p>
         </div>
 
-        {/* Introduction section */}
-        <div className="space-y-4">
-          <h2 className="text-2xl font-bold">1. Introduction</h2>
-          <p className="text-text-muted">
-            Welcome to SpicyPrivacy (&quot;we,&quot; &quot;us,&quot; or
-            &quot;our&quot;). We provide expert guidance and comprehensive
-            solutions to help you navigate the complexities of AI and data
-            privacy regulations.
-          </p>
-          <p className="text-text-muted">
-            This Privacy Policy explains how we collect, use, disclose, and
-            safeguard your information when you visit our website,
-            SpicyPrivacy.com (the &quot;Site&quot;) and engage with our
-            services. We are committed to protecting your personal data and
-            respecting your privacy.
-          </p>
-          <p className="text-text-muted">
-            Please read this policy carefully. If you do not agree with the
-            terms of this Privacy Policy, please do not access the Site.
+        <div className="space-y-10 text-text-muted">
+          <div className="space-y-4">
+            <h2 className="text-2xl font-bold text-text">1. Introduction</h2>
+            <p>
+              <strong>SpicyPrivacy</strong> (referred to as &quot;we&quot;,
+              &quot;us&quot;, or &quot;our&quot;) is a data privacy consultancy
+              and training provider operated by Imagine Huge Private Limited.
+              This Privacy Policy explains how we collect, use, disclose, store,
+              and protect personal data when you visit our website (the
+              &quot;Site&quot;) or engage with our services. By accessing the
+              Site or using our services, you consent to the practices described
+              in this Policy. If you do not agree with this Policy, do not use
+              the Site or provide personal data to us.
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            <h2 className="text-2xl font-bold text-text">
+              2. Scope and Applicability
+            </h2>
+            <p>
+              This Policy applies to individuals who interact with SpicyPrivacy
+              from within India. For residents of the European Union, processing
+              of personal data will be carried out in accordance with the
+              General Data Protection Regulation (GDPR). For residents of India,
+              processing will be governed by the Digital Personal Data
+              Protection Act, 2023 (DPDP Act). Where local law affords greater
+              protection, the higher standard will apply.
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            <h2 className="text-2xl font-bold text-text">
+              3. Controller and Contact Details
+            </h2>
+            <p>
+              <strong>Data Controller:</strong> Imagine Huge Private Limited,
+              trading as SpicyPrivacy.
+              <br />
+              <strong>
+                Primary contact for privacy inquiries and rights requests:
+              </strong>{" "}
+              <a
+                href="mailto:team@spicyprivacy.com"
+                className="text-accent-gold hover:underline"
+              >
+                team@spicyprivacy.com
+              </a>
+              .
+              <br />
+              <strong>Grievance Officer:</strong> SpicyPrivacy, email:{" "}
+              <a
+                href="mailto:team@spicyprivacy.com"
+                className="text-accent-gold hover:underline"
+              >
+                team@spicyprivacy.com
+              </a>
+              .
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            <h2 className="text-2xl font-bold text-text">
+              4. Information We Collect
+            </h2>
+            <p>We collect the following categories of personal data:</p>
+            <ul className="list-disc space-y-2 pl-6">
+              <li>
+                <strong>Personal Data you provide directly</strong>:
+                <ul className="mt-2 list-disc space-y-1 pl-6">
+                  <li>Name</li>
+                  <li>Email address</li>
+                  <li>Telephone number</li>
+                  <li>Job title and employer</li>
+                  <li>Company name</li>
+                  <li>
+                    Information submitted through contact forms, consultation
+                    requests, registrations, or correspondence
+                  </li>
+                  <li>
+                    Materials or content shared during consultancy, training, or
+                    research engagements
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <strong>
+                  Usage and Technical Data collected automatically
+                </strong>
+                : tracking and cookie-related disclosures are governed by a
+                separate Cookie Policy.
+              </li>
+            </ul>
+          </div>
+
+          <div className="space-y-4">
+            <h2 className="text-2xl font-bold text-text">
+              5. Purposes of Processing
+            </h2>
+            <p>We process personal data for the following purposes:</p>
+            <ul className="list-disc space-y-2 pl-6">
+              <li>
+                responding to enquiries and delivering consulting, advisory,
+                training, and certification services;
+              </li>
+              <li>
+                administering registrations, subscriptions, invoicing, and
+                contractual obligations;
+              </li>
+              <li>
+                sending service updates, newsletters, and promotional materials
+                where you have opted in;
+              </li>
+              <li>
+                conducting research and analysis relating to regulatory
+                developments;
+              </li>
+              <li>monitoring and improving the Site and our services;</li>
+              <li>maintaining the security of systems and preventing fraud;</li>
+              <li>complying with legal and regulatory requirements;</li>
+              <li>any purpose for which you provide explicit consent.</li>
+            </ul>
+          </div>
+
+          <div className="space-y-4">
+            <h2 className="text-2xl font-bold text-text">
+              6. Legal Bases for Processing
+            </h2>
+            <p>Processing is undertaken only where a lawful basis exists:</p>
+            <ul className="list-disc space-y-2 pl-6">
+              <li>consent;</li>
+              <li>performance of a contract or steps preceding a contract;</li>
+              <li>compliance with legal obligations;</li>
+              <li>
+                legitimate interests pursued by us, provided such interests are
+                not overridden by your rights.
+              </li>
+            </ul>
+          </div>
+
+          <div className="space-y-4">
+            <h2 className="text-2xl font-bold text-text">
+              7. Disclosure and Sharing of Personal Data
+            </h2>
+            <p>We do not sell personal data. Data may be shared with:</p>
+            <ul className="list-disc space-y-2 pl-6">
+              <li>internal employees and authorised contract personnel;</li>
+              <li>
+                third-party service providers supporting hosting, communication,
+                analytics, or operational functions, subject to confidentiality
+                obligations;
+              </li>
+              <li>
+                regulators, law enforcement, or authorities where legally
+                required;
+              </li>
+              <li>
+                entities involved in a merger, acquisition, financing, or
+                transfer of assets, subject to safeguards;
+              </li>
+              <li>
+                any party where you have expressly consented to disclosure.
+              </li>
+            </ul>
+          </div>
+
+          <div className="space-y-4">
+            <h2 className="text-2xl font-bold text-text">
+              8. International Transfers
+            </h2>
+            <p>
+              Although primary processing occurs in India, certain service
+              providers may operate outside India. Where transfers occur,
+              appropriate safeguards and legally compliant transfer mechanisms
+              will be applied.
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            <h2 className="text-2xl font-bold text-text">9. Data Retention</h2>
+            <p>
+              Personal data is retained only for the duration necessary to
+              fulfil the purposes described in this Policy, to meet legal
+              obligations, or to establish or defend legal claims. Data that is
+              no longer required will be securely deleted or anonymised.
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            <h2 className="text-2xl font-bold text-text">
+              10. Security Measures
+            </h2>
+            <p>
+              We implement administrative, technical, and organisational
+              safeguards to protect personal data from unauthorised access,
+              alteration, disclosure, or destruction. While reasonable steps are
+              taken to secure data, no system can be guaranteed completely
+              secure.
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            <h2 className="text-2xl font-bold text-text">11. Your Rights</h2>
+            <p>Depending on the jurisdiction, you may have the right to:</p>
+            <ul className="list-disc space-y-2 pl-6">
+              <li>access;</li>
+              <li>rectification;</li>
+              <li>erasure;</li>
+              <li>restriction of processing;</li>
+              <li>
+                objection to processing based on legitimate interests or direct
+                marketing;
+              </li>
+              <li>data portability where applicable;</li>
+              <li>withdrawal of consent at any time.</li>
+            </ul>
+            <p>Rights requests may be submitted to team@spicyprivacy.com.</p>
+          </div>
+
+          <div className="space-y-4">
+            <h2 className="text-2xl font-bold text-text">
+              12. Children&apos;s Data
+            </h2>
+            <p>
+              The Site and services are not intended for individuals under 18.
+              We do not knowingly collect personal data from minors. If such
+              data is identified, it will be deleted.
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            <h2 className="text-2xl font-bold text-text">
+              13. Third-Party Websites
+            </h2>
+            <p>
+              The Site may contain links to external websites. This Policy does
+              not govern those sites, and we are not responsible for their data
+              handling practices. Users should review third-party privacy
+              notices before interacting with such sites.
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            <h2 className="text-2xl font-bold text-text">
+              14. Changes to this Policy
+            </h2>
+            <p>
+              We may amend this Policy to align with legal developments or
+              business needs. The updated version will be published with a
+              revised &quot;Last Updated&quot; date. Continued use of the Site
+              constitutes acceptance of the updated Policy.
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            <h2 className="text-2xl font-bold text-text">
+              15. Complaints and Grievance Redressal
+            </h2>
+            <p>
+              For complaints, questions, or to exercise data rights, contact
+              <a
+                href="mailto:team@spicyprivacy.com"
+                className="ml-1 text-accent-gold hover:underline"
+              >
+                team@spicyprivacy.com
+              </a>
+              . If you remain dissatisfied, you may escalate your complaint to
+              the relevant supervisory authority under applicable law.
+            </p>
+          </div>
+
+          <p>
+            <em>Effective Date: 12 November 2025.</em>
           </p>
         </div>
 
-        <div className="space-y-4">
-          <h2 className="text-2xl font-bold">2. Information We Collect</h2>
-          <p className="text-text-muted">
-            We may collect information about you in a variety of ways. The
-            information we may collect on the Site includes:
+        <div className="rounded-3xl border border-border-color/60 bg-background-card/70 p-8 shadow-sm">
+          <p className="text-sm uppercase tracking-[0.3em] text-text-muted">
+            Need help?
           </p>
-          <h3 className="text-xl font-semibold mt-4">A. Personal Data</h3>
-          <p className="text-text-muted">
-            Personally identifiable information, such as your name, email
-            address, phone number, job title, and company name, that you
-            voluntarily give to us when you:
-          </p>
-          <ul className="list-decimal list-inside space-y-2 text-text-muted ml-4">
-            <li>
-              Fill out a &quot;Contact Us&quot; or consultation request form.
-            </li>
-            <li>Subscribe to our newsletter or blog.</li>
-            <li>Download resources (like white papers or guides).</li>
-            <li>Otherwise correspond with us.</li>
-          </ul>
-          <h3 className="text-xl font-semibold mt-4">B. Usage Data</h3>
-          <p className="text-text-muted">
-            Information our servers automatically collect when you access the
-            Site, such as your IP address, browser type, operating system,
-            access times, and the pages you have viewed directly before and
-            after accessing the Site.
-          </p>
-          <h3 className="text-xl font-semibold mt-4">
-            C. Cookies and Tracking Technologies
-          </h3>
-          <p className="text-text-muted">
-            We may use cookies, web beacons, and other tracking technologies on
-            the Site to help customize the Site and improve your experience.
-            When you access the Site, your personal information is not collected
-            through the use of tracking technology. Most browsers are set to
-            accept cookies by default. You can remove or reject cookies, but be
-            aware that such action could affect the availability and
-            functionality of the Site.
-          </p>
-        </div>
-
-        <div className="space-y-4">
-          <h2 className="text-2xl font-bold">3. How We Use Your Information</h2>
-          <p className="text-text-muted">
-            Having accurate information about you permits us to provide you with
-            a smooth, efficient, and customized experience. Specifically, we may
-            use information collected about you to:
-          </p>
-          <ul className="list-decimal list-inside space-y-2 text-text-muted ml-4">
-            <li>Respond to your inquiries and consultation requests.</li>
-            <li>
-              Provide our Services and fulfill our contractual obligations.
-            </li>
-            <li>
-              Send you our newsletter, marketing materials, and other
-              information about our services, provided you have opted-in to
-              receive such communications.
-            </li>
-            <li>
-              Monitor and analyze usage and trends to improve the Site and our
-              service offerings.
-            </li>
-            <li>Maintain the security and integrity of our Site.</li>
-            <li>Comply with legal and regulatory obligations.</li>
-          </ul>
-        </div>
-
-        <div className="space-y-4">
-          <h2 className="text-2xl font-bold">4. Legal Basis for Processing</h2>
-          <p className="text-text-muted">
-            We will only process your personal data when we have a valid legal
-            basis to do so. This may include:
-          </p>
-          <ul className="list-decimal list-inside space-y-2 text-text-muted ml-4">
-            <li>
-              <strong>Consent:</strong> You have given us clear consent to
-              process your personal data for a specific purpose (e.g.,
-              subscribing to our newsletter).
-            </li>
-            <li>
-              <strong>Contract:</strong> Processing is necessary for a contract
-              we have with you, or because you have asked us to take specific
-              steps before entering into a contract (e.g., providing a quote for
-              services).
-            </li>
-            <li>
-              <strong>Legitimate Interests:</strong> Processing is necessary for
-              our legitimate interests (e.g., to improve our services and for
-              administrative purposes), provided those interests are not
-              overridden by your rights.
-            </li>
-            <li>
-              <strong>Legal Obligation:</strong> Processing is necessary for us
-              to comply with the law.
-            </li>
-          </ul>
-        </div>
-
-        <div className="space-y-4">
-          <h2 className="text-2xl font-bold">
-            5. Disclosure of Your Information
+          <h2 className="mt-2 text-3xl font-bold text-text">
+            Contact Our Privacy Team
           </h2>
-          <p className="text-text-muted">
-            We do not sell your personal information. We may share information
-            we have collected about you in certain situations:
-          </p>
-          <ul className="list-decimal list-inside space-y-2 text-text-muted ml-4">
-            <li>
-              <strong>By Law or to Protect Rights:</strong> If we believe the
-              release of information about you is necessary to respond to legal
-              process, to investigate or remedy potential violations of our
-              policies, or to protect the rights, property, and safety of
-              others.
-            </li>
-            <li>
-              <strong>Third-Party Service Providers:</strong> With vendors,
-              consultants, and other third-party service providers who perform
-              services for us (e.g., website hosting, email delivery, analytics)
-              and require access to such information to do that work. They are
-              obligated to protect your data and use it only for the purposes
-              for which it was disclosed.
-            </li>
-            <li>
-              <strong>Business Transfers:</strong> In connection with any
-              merger, sale of company assets, financing, or acquisition of all
-              or a portion of our business by another company.
-            </li>
-            <li>
-              <strong>With Your Consent:</strong> We may disclose your personal
-              information for any other purpose with your consent.
-            </li>
-          </ul>
-        </div>
-
-        <div className="space-y-4">
-          <h2 className="text-2xl font-bold">6. Data Security</h2>
-          <p className="text-text-muted">
-            We use administrative, technical, and physical security measures to
-            help protect your personal information. While we have taken
-            reasonable steps to secure the personal information you provide to
-            us, please be aware that despite our efforts, no security measures
-            are perfect or impenetrable, and no method of data transmission can
-            be guaranteed against any interception or other type of misuse.
-          </p>
-        </div>
-
-        <div className="space-y-4">
-          <h2 className="text-2xl font-bold">7. Data Retention</h2>
-          <p className="text-text-muted">
-            We will only retain your personal data for as long as is necessary
-            to fulfill the purposes for which it was collected, including for
-            the purposes of satisfying any legal, accounting, or reporting
-            requirements.
-          </p>
-        </div>
-
-        <div className="space-y-4">
-          <h2 className="text-2xl font-bold">8. Your Data Protection Rights</h2>
-          <p className="text-text-muted">
-            Depending on your jurisdiction (e.g., India under the DPDPA, Europe
-            under the GDPR), you may have specific rights regarding your
-            personal data. These rights may include:
-          </p>
-          <ul className="list-decimal list-inside space-y-2 text-text-muted ml-4">
-            <li>
-              <strong>The right to access:</strong> You have the right to
-              request copies of your personal data.
-            </li>
-            <li>
-              <strong>The right to rectification:</strong> You have the right to
-              request that we correct any information you believe is inaccurate
-              or complete information you believe is incomplete.
-            </li>
-            <li>
-              <strong>The right to erasure:</strong> You have the right to
-              request that we erase your personal data, under certain
-              conditions.
-            </li>
-            <li>
-              <strong>The right to withdraw consent:</strong> You have the right
-              to withdraw your consent at any time where we relied on your
-              consent to process your information.
-            </li>
-            <li>
-              <strong>The right to lodge a complaint:</strong> You have the
-              right to lodge a complaint with a supervisory authority.
-            </li>
-          </ul>
-          <p className="text-text-muted">
-            To exercise any of these rights, please contact us using the details
-            below.
-          </p>
-        </div>
-
-        <div className="space-y-4">
-          <h2 className="text-2xl font-bold">9. Third-Party Websites</h2>
-          <p className="text-text-muted">
-            The Site may contain links to third-party websites. This Privacy
-            Policy does not apply to those third-party sites. We are not
-            responsible for the privacy and data collection practices of such
-            sites.
-          </p>
-        </div>
-
-        <div className="space-y-4">
-          <h2 className="text-2xl font-bold">10. Children&apos;s Privacy</h2>
-          <p className="text-text-muted">
-            Our Site is not intended for use by children under the age of 18. We
-            do not knowingly collect personal information from children under
-            18.
-          </p>
-        </div>
-
-        <div className="space-y-4">
-          <h2 className="text-2xl font-bold">
-            11. Changes to This Privacy Policy
-          </h2>
-          <p className="text-text-muted">
-            We may update this Privacy Policy from time to time. The updated
-            version will be indicated by a &quot;Last Updated&quot; date. We
-            encourage you to review this Privacy Policy frequently to be
-            informed of how we are protecting your information.
-          </p>
-        </div>
-
-        <div className="space-y-4">
-          <h2 className="text-2xl font-bold">12. Contact Us</h2>
-          <p className="text-text-muted">
-            If you have questions or comments about this Privacy Policy, please
-            contact us at:{" "}
+          <p className="mt-4 text-text-muted">
+            Prefer email? Reach out any time at
             <a
-              href="mailto:privacy@spicyprivacy.com"
-              className="text-accent-gold hover:underline"
+              href="mailto:team@spicyprivacy.com"
+              className="ml-1 text-accent-gold hover:underline"
             >
-              privacy@spicyprivacy.com
+              team@spicyprivacy.com
             </a>
+            . We aim to respond to every request within two business days.
           </p>
+          <div className="mt-6 grid gap-4 text-sm text-text">
+            <div className="flex items-center justify-between rounded-2xl bg-background-card px-4 py-3">
+              <span className="font-medium">General enquiries</span>
+              <a
+                href="mailto:team@spicyprivacy.com"
+                className="font-semibold text-accent-gold hover:underline"
+              >
+                team@spicyprivacy.com
+              </a>
+            </div>
+            <div className="flex items-center justify-between rounded-2xl bg-background-card px-4 py-3">
+              <span className="font-medium">Grievance officer</span>
+              <a
+                href="mailto:team@spicyprivacy.com"
+                className="font-semibold text-accent-gold hover:underline"
+              >
+                team@spicyprivacy.com
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
